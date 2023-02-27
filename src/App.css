@@ -1,0 +1,23 @@
+div.header {
+    display: flex;
+    padding: 30px;
+    align-items: center;
+    background-color: #264653;
+    color: #E9C46A;
+    font-family: 'Lustria', serif;
+    font-size: 25px;
+}
+
+div.header>img {
+    width: 70px;
+}
+
+div.header>h1 {
+    margin: 0 auto 0 20px
+}
+
+div.header button {
+    margin: 5px;
+    width: 100px;
+    height: 50px;
+}
