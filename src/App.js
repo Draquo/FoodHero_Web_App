@@ -43,6 +43,8 @@ function App() {
       <Header />
       <About />
       <WhoAreYou />
+      <Foodlist />
+      <Contact summary = {listOfAllAlreadyAddedFoodDonations}/>
       <Foodlist        
         handleClick={handleClick}
         handleInput={handleInput}
