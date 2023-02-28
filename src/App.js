@@ -1,13 +1,15 @@
-import "./App.css";
-import { useState } from "react";
-
-import Header from "./components/Header";
-import About from "./components/About";
-import WhoAreYou from "./components/WhoAreYou";
-import Foodlist from "./components/Foodlist";
-import Contact from "./components/Contact";
+import './App.css';
+import { useState } from 'react';
+import Header from './components/Header';
+import About from './components/About';
+import WhoAreYou from './components/WhoAreYou';
+import Foodlist from './components/Foodlist';
+import Contact from './components/Contact';
+import WhoWeAre from './components/WhoWeAre';
+import Map from './components/Map';
 
 function App() {
+  const [isDisplayWhoWeAreTab, setDisplayWhoWeAreTab] = useState(false)
   const [foodDonation, setFoodDonation] = useState({});
   const [listOfAllAlreadyAddedFoodDonations, setListOfAllAlreadyAddedFoodDonations] = useState([]);
 
@@ -18,8 +20,6 @@ function App() {
 	  unit: unit
     });
   }
-
-console.log(listOfAllAlreadyAddedFoodDonations)
 
   function findIndexOfAlreadyAddedFood(category) {
     return listOfAllAlreadyAddedFoodDonations.findIndex(
@@ -43,15 +43,17 @@ console.log(listOfAllAlreadyAddedFoodDonations)
 
   return (
     <div className="App">
-      <Header />
-      <About />
-      <WhoAreYou />
-      <Foodlist        
+      <Header isDisplayWhoWeAreTab={isDisplayWhoWeAreTab} setDisplayWhoWeAreTab={setDisplayWhoWeAreTab} />
+      {!isDisplayWhoWeAreTab && <About />}
+      {isDisplayWhoWeAreTab && <WhoWeAre />}
+      {isDisplayWhoWeAreTab && <Map />}
+      {!isDisplayWhoWeAreTab && <WhoAreYou />}
+      {!isDisplayWhoWeAreTab && <Foodlist
         handleClick={handleClick}
         handleInput={handleInput}
-      />
-      <Contact summary = {listOfAllAlreadyAddedFoodDonations}/>
-    </div>
+        />}
+      {!isDisplayWhoWeAreTab && <Contact summary = {listOfAllAlreadyAddedFoodDonations} />}
+      </div>
   );
 }
 
