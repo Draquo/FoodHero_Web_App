@@ -1,4 +1,20 @@
 
+div.whoWeAre {
+      background-color: #2a9d8f;
+      min-height: 100vw;
+}
+
+div.map {
+  background-color: #264653;
+  min-height: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+iframe {
+  max-width: 50%;
+}
 div.header {
     display: flex;
     padding: 30px;
@@ -68,17 +84,17 @@ div.About {
   font-size: xx-large;
 }
 
-.poland {
+.poland, .management {
   padding: 25px;
   display: flex;
   justify-content: space-between;
 }
 
-.poland > * {
+.poland > *, .management> * {
   flex: 1;
 }
 
-.poland > .description {
+.poland > .description, .management>.description  {
   text-align: center;
   padding: 25px;
   font-size: large;
@@ -86,13 +102,16 @@ div.About {
   color: #2a9d8f;
 }
 
-.poland > .picture {
+.poland > .picture, .management>.picture {
   text-align: center;
   font-size: large;
   background-color: #2a9d8f;
   border-radius: 25px 25px 25px 25px;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
+
+
+
 
 .About > .foodheroe {
   text-align: center;

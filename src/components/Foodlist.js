@@ -28,9 +28,7 @@ function Foodlist() {
         setListOfAllAlreadyAddedFoodDonations(prevList => [...prevList, foodDonation])
     }
 
-    useEffect(() => {
-         console.log(listOfAllAlreadyAddedFoodDonations);
-     }, [foodDonation, listOfAllAlreadyAddedFoodDonations]); 
+    
 
     return (
         <div className="foodlist">
