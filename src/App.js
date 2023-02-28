@@ -4,6 +4,7 @@ import About from './components/About';
 import WhoAreYou from './components/WhoAreYou';
 import Foodlist from './components/Foodlist';
 import Contact from './components/Contact';
+import Donate from './components/Donate';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <WhoAreYou />
       <Foodlist />
       <Contact />
+      <Donate />
     </div>
   );
 }
