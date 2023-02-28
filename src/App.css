@@ -1,3 +1,4 @@
+
 div.header {
     display: flex;
     padding: 30px;
@@ -28,6 +29,7 @@ div.header button {
     color: #E9C46A;
     font-weight: bold;
 }
+
 div.About {
   padding: 0px;
   color: black;
@@ -91,6 +93,7 @@ div.About {
   border-radius: 25px 25px 25px 25px;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
+
 .About > .foodheroe {
   text-align: center;
   background-color: #2a9d8f;
@@ -102,7 +105,67 @@ div.About {
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 
+div.who-are-you {
+    background-color: #E9C46A;
+    padding: 40px;
+    display: flex;
+    justify-content: space-around;
+}
 
+div.who-are-you>button{
+    width: 170px;
+    height: 80px;
+    font-family: 'Lustria', serif;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    background-color: #E9C46A;
+    color: #264653;
+}
+
+div.foodlist {
+    background-color: #F4A261;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;    
+}
+
+h1.category {
+font-size: small;
+margin-bottom: 4vw;
+}
+
+div.foodCard {
+    text-align: center;
+    background-color: #F4A261;    
+    min-width: 15%;
+    max-width: 20%;
+    min-height: 18vw;
+    max-height: 20vw;
+    margin: 0 7.5% 1vw 7.5%;
+    border: 1px solid rgba(238, 141, 61, 0.874);
+    border-radius: 5%;
+    overflow: hidden;
+}
+
+img.food {
+    max-width: 12vw;
+}
+
+input.quantity {
+min-width: 70%
+}
+
+button.addFoodButton {
+min-width: 35%}
+
+div.addToDonating {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
 
 #form-and-summary-container{
     display: flex;
@@ -146,4 +209,4 @@ div.About {
 
 #adress-container, #contact-container {
     display:flex;
-    }
+ }

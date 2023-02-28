@@ -1,14 +1,42 @@
-import './App.css';
-import Header from './components/Header';
-import About from './components/About';
-import WhoAreYou from './components/WhoAreYou';
-import Foodlist from './components/Foodlist';
-import Contact from './components/Contact';
+import "./App.css";
+import { useState } from "react";
+
+import Header from "./components/Header";
+import About from "./components/About";
+import WhoAreYou from "./components/WhoAreYou";
+import Foodlist from "./components/Foodlist";
+import Contact from "./components/Contact";
 
 function App() {
-  let mock = { category: 'Dry legume seeds', quantity: 3 }
-  let mock2 = { category: 'other category', quantity: 5 }
-  let arr = [mock, mock2]
+  const [foodDonation, setFoodDonation] = useState({});
+  const [listOfAllAlreadyAddedFoodDonations, setListOfAllAlreadyAddedFoodDonations] = useState([]);
+
+  function handleInput(event, category) {
+    setFoodDonation({
+      category: category,
+      quantity: parseInt(event.target.value),
+    });
+  }
+
+  function findIndexOfAlreadyAddedFood(category) {
+    return listOfAllAlreadyAddedFoodDonations.findIndex(
+      (food) => food.category === category
+    );
+  }
+
+  function handleClick(category) {
+    if (findIndexOfAlreadyAddedFood(category) !== -1) {
+      listOfAllAlreadyAddedFoodDonations[
+        findIndexOfAlreadyAddedFood(category)
+      ].quantity = parseInt(foodDonation.quantity);
+      setListOfAllAlreadyAddedFoodDonations(listOfAllAlreadyAddedFoodDonations);
+      return;
+    }
+    setListOfAllAlreadyAddedFoodDonations((prevList) => [
+      ...prevList,
+      foodDonation,
+    ]);
+  }
 
   return (
     <div className="App">
@@ -16,7 +44,12 @@ function App() {
       <About />
       <WhoAreYou />
       <Foodlist />
-      <Contact summary = {arr}/>
+      <Contact summary = {listOfAllAlreadyAddedFoodDonations}/>
+      <Foodlist        
+        handleClick={handleClick}
+        handleInput={handleInput}
+      />
+      <Contact />
     </div>
   );
 }
