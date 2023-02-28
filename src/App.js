@@ -37,19 +37,16 @@ function App() {
       foodDonation,
     ]);
   }
-
   return (
     <div className="App">
       <Header />
       <About />
       <WhoAreYou />
-      <Foodlist />
-      <Contact summary = {listOfAllAlreadyAddedFoodDonations}/>
       <Foodlist        
         handleClick={handleClick}
         handleInput={handleInput}
       />
-      <Contact />
+      <Contact summary = {listOfAllAlreadyAddedFoodDonations}/>
     </div>
   );
 }
