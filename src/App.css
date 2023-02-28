@@ -1,3 +1,109 @@
+div.header {
+    display: flex;
+    padding: 30px;
+    align-items: center;
+    background-color: #264653;
+    color: #E9C46A;
+    font-family: 'Lustria', serif;
+    font-size: 25px;
+}
+
+div.header>img {
+    width: 70px;
+}
+
+div.header>h1 {
+    margin: 0 auto 0 20px
+}
+
+div.header button {
+    margin-right: 15px;
+    width: 160px;
+    height: 50px;
+    cursor: pointer;
+    font-family: 'Lustria', serif;
+    font-size: 25px;
+    border: none;
+    background-color: #264653;
+    color: #E9C46A;
+    font-weight: bold;
+}
+div.About {
+  padding: 0px;
+  color: black;
+  font-family: 'Lustria', serif;
+  background-color: #264653;
+}
+
+.About > .peopleSay {
+  padding: 25px;
+  background-color: #2a9d8f;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0px 0px 25px 25px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+.peopleSay > * {
+  flex: 1;
+}
+
+.peopleSay > :first-child {
+  text-align: left;
+  padding-bottom: 15px;
+  margin-left: 15px;
+  width: 35%;
+  border-radius: 35px;
+}
+
+.peopleSay > :nth-child(2) {
+  text-align: left;
+  margin-left: 7%;
+  font-style: italic;
+  font-family: 'Lato';
+  font-weight: 300;
+  font-size: xx-large;
+}
+
+.poland {
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.poland > * {
+  flex: 1;
+}
+
+.poland > .description {
+  text-align: center;
+  padding: 25px;
+  font-size: large;
+  width: 50%;
+  color: #2a9d8f;
+}
+
+.poland > .picture {
+  text-align: center;
+  font-size: large;
+  background-color: #2a9d8f;
+  border-radius: 25px 25px 25px 25px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+.About > .foodheroe {
+  text-align: center;
+  background-color: #2a9d8f;
+  padding: 20px;
+  color: black;
+  margin: 5% 12% 0% 12%;
+  font-size: xx-large;
+  border-radius: 25px 25px 25px 25px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+
+
 #form-and-summary-container{
     display: flex;
     text-align: center;
@@ -40,4 +146,4 @@
 
 #adress-container, #contact-container {
     display:flex;
-}
+    }
