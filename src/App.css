@@ -101,3 +101,30 @@ div.About {
   border-radius: 25px 25px 25px 25px;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
+
+
+
+#form-and-summary-container{
+    display: flex;
+}
+
+#contact {
+    padding: 20px;
+    background-color: #E76F51;
+    text-align: center;
+}
+
+#contact-form-container {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 50vw;
+    max-width: 50vw;
+}
+
+#summary-container {
+    max-width: 50vw;
+}
+
+#adress-container, #contact-container {
+    display:flex;
+    }
