@@ -1,4 +1,9 @@
 
+.shadow {
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+ 
+}
+
 div.header {
     display: flex;
     padding: 30px;
@@ -35,6 +40,9 @@ div.About {
   color: black;
   font-family: 'Lustria', serif;
   background-color: #264653;
+  position: relative;
+  z-index: 3;
+  margin: -10px 0;
 }
 
 .About > .peopleSay {
@@ -114,6 +122,9 @@ div.who-are-you {
     padding: 40px;
     display: flex;
     justify-content: space-around;
+    position: relative;
+    z-index: 2;
+    margin: -10px 0;
 }
 
 div.who-are-you>button{
@@ -133,7 +144,10 @@ div.foodlist {
     background-color: #F4A261;
     max-width: 100%;
     display: flex;
-    flex-wrap: wrap;    
+    flex-wrap: wrap;  
+    position: relative;
+    z-index: 1;
+    margin: -10px 0;  
 }
 
 h1.category {
@@ -151,7 +165,8 @@ div.foodCard {
     margin: 0 7.5% 1vw 7.5%;
     border: 1px solid rgba(238, 141, 61, 0.874);
     border-radius: 5%;
-    overflow: hidden;
+    overflow: hidden; 
+    
 }
 
 img.food {

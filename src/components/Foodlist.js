@@ -33,7 +33,7 @@ function Foodlist() {
      }, [foodDonation, listOfAllAlreadyAddedFoodDonations]); 
 
     return (
-        <div className="foodlist">
+        <div className="foodlist shadow">
             {foodList.map(food => (
                 <div className="foodCard">
                     <img className="food" src={food.img} alt="" />

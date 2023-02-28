@@ -14,7 +14,7 @@ export default class About extends Component {
       slidesToScroll: 1,
     };
     return (
-      <div className="About">
+      <div className="About shadow">
         <div className="peopleSay">
           <img src={hungry} className="hungry" alt="hungry" />
           <p>
