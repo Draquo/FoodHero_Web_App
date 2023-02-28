@@ -20,4 +20,23 @@ div.header button {
     margin: 5px;
     width: 100px;
     height: 50px;
+    font-family: Lato;
+}
+
+div.who-are-you {
+    background-color: #E9C46A;
+    padding: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+div.who-are-you>button{
+    width: 180px;
+    height: 80px;
+    font-family: 'Lustria', serif;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 0;
+    cursor: pointer;
+    border: none;
 }
