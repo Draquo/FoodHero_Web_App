@@ -2,38 +2,38 @@ const food = [
   {
     "category": "Cereal products",
     "img": "/cereal-products.png",
-    "quantity": "gram",
+    "unit": "gram",
   },
   {
     "category": "Milk and dairy produce",
     "img": "/dairy-products.png",
-    "quantity": "litre",
+    "unit": "litre",
   },
   {
     "category": "Eggs",
     "img": "/eggs.png",
-    "quantity": "unit",
+    "unit": "piece",
     
   },
   {
     "category": "Meat, poultry and fish",
     "img": "/meat.png",
-    "quantity": "gram",
+    "unit": "gram",
   },
   {
     "category": "Vegetables and fruits",
     "img": "/vegetables-fruits.png",
-    "quantity": "kilogram",
+    "unit": "kilogram",
   },
   {
     "category": "Dry legume seeds",
     "img": '/seeds.png',
-    "quantity": "gram",
+    "unit": "gram",
   },
   {
     "category": "Sugar and sweets",
     "img": "/sweets.png",
-  "quantity": "kilogram",
+    "unit": "kilogram",
   }
 ]
 
