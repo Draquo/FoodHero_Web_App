@@ -28,6 +28,7 @@ div.header button {
     color: #E9C46A;
     font-weight: bold;
 }
+
 div.About {
   padding: 0px;
   color: black;
@@ -91,6 +92,7 @@ div.About {
   border-radius: 25px 25px 25px 25px;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
+
 .About > .foodheroe {
   text-align: center;
   background-color: #2a9d8f;
@@ -102,29 +104,22 @@ div.About {
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 
-
-
-#form-and-summary-container{
+div.who-are-you {
+    background-color: #E9C46A;
+    padding: 40px;
     display: flex;
+    justify-content: space-around;
 }
 
-#contact {
-    padding: 20px;
-    background-color: #E76F51;
-    text-align: center;
+div.who-are-you>button{
+    width: 170px;
+    height: 80px;
+    font-family: 'Lustria', serif;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    background-color: #E9C46A;
+    color: #264653;
 }
-
-#contact-form-container {
-    display: flex;
-    flex-wrap: wrap;
-    min-width: 50vw;
-    max-width: 50vw;
-}
-
-#summary-container {
-    max-width: 50vw;
-}
-
-#adress-container, #contact-container {
-    display:flex;
-    }
