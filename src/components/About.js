@@ -61,14 +61,15 @@ export default class About extends Component {
             </div>
           </Slider>
         </div>
-        <div className="foodheroe">
-          <h2>FoodHeroe</h2>
+        <div className="foodhero">
+          <h2>FoodHero</h2>
           <p>
             distributes thousands of kilos of food to hundreds of thousands of
             needy neighbors, making us the leading famine relief organization in
             our region
           </p>
         </div>
+          <div className='freespace'></div>
       </div>
     );
   }

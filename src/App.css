@@ -94,7 +94,7 @@ div.About {
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 
-.About > .foodheroe {
+.About > .foodhero {
   text-align: center;
   background-color: #2a9d8f;
   padding: 20px;
@@ -103,6 +103,10 @@ div.About {
   font-size: xx-large;
   border-radius: 25px 25px 25px 25px;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+.About > .freespace {
+  height: 40px;
+
 }
 
 div.who-are-you {
