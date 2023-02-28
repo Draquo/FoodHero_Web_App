@@ -16,28 +16,27 @@ function Foodlist() {
     }
 
     function findIndexOfAlreadyAddedFood(category) {
-        return listOfAllAlreadyAddedFoodDonations.findIndex(elem => elem.category === category)
-}
+        return listOfAllAlreadyAddedFoodDonations.findIndex(food => food.category === category)
+    }
 
     function handleClick(category) {
-        if (findIndexOfAlreadyAddedFood(category) === -1) {
-            setListOfAllAlreadyAddedFoodDonations(prevList => [...prevList, foodDonation])
-        } else {
+        if (findIndexOfAlreadyAddedFood(category) !== -1) {
             listOfAllAlreadyAddedFoodDonations[findIndexOfAlreadyAddedFood(category)].quantity += parseInt(foodDonation.quantity)
             setListOfAllAlreadyAddedFoodDonations(listOfAllAlreadyAddedFoodDonations)
+            return;
         }
+        setListOfAllAlreadyAddedFoodDonations(prevList => [...prevList, foodDonation])
     }
 
     useEffect(() => {
-        console.log(listOfAllAlreadyAddedFoodDonations);
-    }, [foodDonation, listOfAllAlreadyAddedFoodDonations]);
-   
+         console.log(listOfAllAlreadyAddedFoodDonations);
+     }, [foodDonation, listOfAllAlreadyAddedFoodDonations]); 
+
     return (
         <div className="foodlist">
             {foodList.map(food => (
                 <div className="foodCard">
                     <img className="food" src={food.img} alt="" />
-                    <div className="foodCard-body">
                         <h1 className="category">{food.category}</h1>
                         <div className="addToDonating">
                             <input
@@ -51,10 +50,7 @@ function Foodlist() {
                             <button className={food.category} onClick={() => handleClick(food.category)}>ADD</button>
                         </div>
                     </div>
-                </div>
             ))}
-
-
         </div>
     )
 }

@@ -2,26 +2,22 @@ div.foodlist {
     background-color: #F4A261;
     max-width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    overflow-x: auto;
-    
+    flex-wrap: wrap;    
 }
 
 h1.category {
 font-size: small;
-margin-bottom: 5vw;
+margin-bottom: 4vw;
 }
 
-.foodCard {
+div.foodCard {
     text-align: center;
     background-color: #F4A261;    
     min-width: 15%;
     max-width: 20%;
-    min-height: 20vw;
+    min-height: 18vw;
     max-height: 20vw;
-    margin-left: 7.5%;
-    margin-right: 7.5%;
-    margin-bottom: 2vw;
+    margin: 0 7.5% 1vw 7.5%;
     border: 1px solid rgba(238, 141, 61, 0.874);
     border-radius: 5%;
     overflow: hidden;
@@ -32,7 +28,8 @@ img.food {
 }
 
 input.quantity {
-min-width: 70%}
+min-width: 70%
+}
 
 button.addFoodButton {
 min-width: 35%}
