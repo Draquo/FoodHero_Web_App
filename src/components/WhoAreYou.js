@@ -1,7 +1,8 @@
 function WhoAreYou() {
     return (
-        <div className="WhoAreYou">
-            Test
+        <div className="who-are-you">
+            <button>I am a restaurant</button>
+            <button>I am a<br/>private person</button>
         </div>
     )
 }
