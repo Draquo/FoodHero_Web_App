@@ -17,7 +17,14 @@ div.header>h1 {
 }
 
 div.header button {
-    margin: 5px;
-    width: 100px;
+    margin-right: 15px;
+    width: 160px;
     height: 50px;
+    cursor: pointer;
+    font-family: 'Lustria', serif;
+    font-size: 25px;
+    border: none;
+    background-color: #264653;
+    color: #E9C46A;
+    font-weight: bold;
 }
