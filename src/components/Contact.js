@@ -1,6 +1,6 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
-function Contact() {
+function Contact(props) {
     const name = useRef(null)
     const surname = useRef(null)
     const phoneNumber = useRef(null)
@@ -9,44 +9,46 @@ function Contact() {
     const street = useRef(null)
     const number = useRef(null)
 
+    const [currentSummary, updateSummary] = useState(props.summary)
+
     function checkValidation(name, surname, phoneNumber, city, postalCode, street, number) {
         if (/[a-z]{2,}/.test(name.current.value)) {
             name.current.setCustomValidity("");
         } else {
             name.current.setCustomValidity('Please enter your name');
         }
-    
+
         if (/[a-z]{2,}/.test(surname.current.value)) {
             surname.current.setCustomValidity("");
         } else {
             surname.current.setCustomValidity('Please enter your surname');
         }
-    
+
         if (/[0-9]{9}/.test(phoneNumber.current.value)) {
             phoneNumber.current.setCustomValidity("");
         } else {
             phoneNumber.current.setCustomValidity('Please enter 9-digit phone number');
         }
-    
+
         if (/[a-z]{2,}/.test(city.current.value)) {
             city.current.setCustomValidity("");
         } else {
             city.current.setCustomValidity('Please enter correct city name');
         }
-    
+
         if (/^\d{2}-\d{3}$/.test(postalCode.current.value)) {
             postalCode.current.setCustomValidity("");
         } else {
             postalCode.current.setCustomValidity('Please enter the postal code in the format "XX-XXX".');
         }
-    
+
         if (/[a-z]{2,}/.test(street.current.value)) {
             street.current.setCustomValidity("");
         } else {
             street.current.setCustomValidity('Please enter correct street name');
         }
-    
-        if (/[0-9]{2,}/.test(number.current.value)) {
+
+        if (/[0-9]{1,}/.test(number.current.value)) {
             number.current.setCustomValidity("");
         } else {
             number.current.setCustomValidity('Please enter correct street number');
@@ -91,10 +93,12 @@ function Contact() {
                     </form>
                 </div>
                 <div id="summary-container">
-                    <h2>Summary</h2>
-                    <li>element1</li>
-                    <li>element2</li>
-                    <li>element3</li>
+                    <div id="summary-list">
+                        <h2 id="summary">Summary</h2>
+                        {currentSummary.map(el => (
+                            <li>{el.quantity} grams of {el.category}</li>
+                        ))}</div>
+                    <div></div>
                 </div>
             </div>
         </div>
@@ -102,3 +106,4 @@ function Contact() {
 }
 
 export default Contact;
+

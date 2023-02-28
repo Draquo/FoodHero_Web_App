@@ -1,5 +1,7 @@
 #form-and-summary-container{
     display: flex;
+    text-align: center;
+    justify-content: center;
 }
 
 #contact {
@@ -15,8 +17,25 @@
     max-width: 50vw;
 }
 
+#contact-form {
+    padding: 20px;
+    background-color:firebrick;
+    border-radius: 15%;
+}
+
+#summary {
+    text-align: center;
+}
+
 #summary-container {
     max-width: 50vw;
+    text-align: left;
+}
+
+#summary-list {
+    padding: 20px;
+    background-color:firebrick;
+    border-radius: 25%;
 }
 
 #adress-container, #contact-container {
