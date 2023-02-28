@@ -31,7 +31,7 @@ div.who-are-you {
 }
 
 div.who-are-you>button{
-    width: 180px;
+    width: 170px;
     height: 80px;
     font-family: 'Lustria', serif;
     font-size: 25px;
@@ -39,4 +39,6 @@ div.who-are-you>button{
     padding: 0;
     cursor: pointer;
     border: none;
+    background-color: #E9C46A;
+    color: #264653;
 }
