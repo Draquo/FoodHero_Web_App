@@ -5,8 +5,10 @@ import About from './components/About';
 import WhoAreYou from './components/WhoAreYou';
 import Foodlist from './components/Foodlist';
 import Contact from './components/Contact';
+import Donate from './components/Donate';
 import WhoWeAre from './components/WhoWeAre';
 import Map from './components/Map';
+
 
 function App() {
   const [isDisplayWhoWeAreTab, setDisplayWhoWeAreTab] = useState(false)
@@ -43,6 +45,7 @@ function App() {
 
   return (
     <div className="App">
+
       <Header isDisplayWhoWeAreTab={isDisplayWhoWeAreTab} setDisplayWhoWeAreTab={setDisplayWhoWeAreTab} />
       {!isDisplayWhoWeAreTab && <About />}
       {isDisplayWhoWeAreTab && <WhoWeAre />}
@@ -53,6 +56,7 @@ function App() {
         handleInput={handleInput}
         />}
       {!isDisplayWhoWeAreTab && <Contact summary = {listOfAllAlreadyAddedFoodDonations} />}
+      <Donate />
       </div>
   );
 }
