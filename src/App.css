@@ -122,10 +122,8 @@ div.About {
   border-radius: 25px 25px 25px 25px;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
-/* .picture{
-  height: 200px;
-  width: 50px;
-} */
+
+
 
 .management> div.managementPicture {
   text-align: center;
@@ -143,8 +141,8 @@ div.About {
 img.managementPicture {
 box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;}
 
-.About > .foodheroe {
 
+.About > .foodhero {
   text-align: center;
   background-color: #2a9d8f;
   padding: 20px;
@@ -318,23 +316,37 @@ div.addToDonating {
 .information {
   width: 50%;
   margin-left: 25%;
+  margin-top: 50px;
+  font-size: xx-large;
 }
 .payment {
   display: flex;
   flex-direction: column;
   margin-left: 25%;
   width: 15%;
+  margin-bottom: 40px;
+  
+  
 }
 .apple {
   background-color: black;
   color: white;
-  border-radius: 25px 25px 25px 25px;
-  border: none;
 }
 
 .other {
   background-color:#e76f51;
   color: black;
+}
+
+.value, .other, .apple {
+  height: 35px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   border-radius: 25px 25px 25px 25px;
   border: none;
 }
+
+.value{
+  text-align: center;
+}
+
