@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 
-const Header = ({ isDisplayWhoWeAreTab, setDisplayWhoWeAreTab, scrollToBottom }) => {
+const Header = ({ isDisplayWhoWeAreTab, setDisplayWhoWeAreTab, scrollToBottom, scrollToUp }) => {
    
     function handleClick() {
         setDisplayWhoWeAreTab(!isDisplayWhoWeAreTab)
+        scrollToUp()
     }
 
     return (
