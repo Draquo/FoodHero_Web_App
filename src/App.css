@@ -90,10 +90,17 @@ div.About {
   font-size: xx-large;
 }
 
-.poland, .management {
+.poland {
   padding: 25px;
   display: flex;
   justify-content: space-between;
+}
+
+.management {
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .poland > *, .management> * {
@@ -116,9 +123,21 @@ div.About {
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 
+.management> div.managementPicture {
+  text-align: center;
+  font-size: large;
+  background-color: #2a9d8f;
+  border-radius: 25px 25px 25px 25px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  display: flex;
+  justify-content: center;
+  max-width: 25%;
+  max-height: 25%;
+  padding: 2%;
+}
 
-
-
+img.managementPicture {
+box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;}
 
 .About > .foodheroe {
 
