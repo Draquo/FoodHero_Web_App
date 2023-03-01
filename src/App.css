@@ -1,5 +1,6 @@
 .shadow {
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  border-radius: 0px 0px 25px 25px;
 }
 
 div.whoWeAre {
@@ -174,7 +175,7 @@ div.who-are-you {
   justify-content: space-around;
   position: relative;
   z-index: 6;
-  margin: -10px 0;
+  margin: -25px 0;
   flex-direction: column;
 text-align: center;
 }
@@ -342,6 +343,7 @@ div.addToDonating {
   z-index: 2;
   top: 18vh;
   position: relative;
+  margin-top: -10px;
 }
 
 .information {
