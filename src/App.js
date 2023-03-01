@@ -58,10 +58,17 @@ function App() {
 	setIsCustomerPrivate(false);
   }
 
+  function scrollToBottom() {
+    window.scrollTo({
+    top: document.documentElement.scrollHeight,
+    behavior: 'smooth'
+    })
+  }
+
   return (
     <div className="App">
 
-      <Header isDisplayWhoWeAreTab={isDisplayWhoWeAreTab} setDisplayWhoWeAreTab={setDisplayWhoWeAreTab} />
+      <Header isDisplayWhoWeAreTab={isDisplayWhoWeAreTab} setDisplayWhoWeAreTab={setDisplayWhoWeAreTab} scrollToBottom={scrollToBottom} />
       {!isDisplayWhoWeAreTab && <About />}
       {isDisplayWhoWeAreTab && <WhoWeAre />}
       {!isDisplayWhoWeAreTab && <WhoAreYou togglePrivateCustomer={togglePrivateCustomer} toggleRestaurant={toggleRestaurant}/>}

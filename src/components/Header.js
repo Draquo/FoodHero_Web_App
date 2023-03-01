@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const Header = ({ isDisplayWhoWeAreTab, setDisplayWhoWeAreTab }) => {
+const Header = ({ isDisplayWhoWeAreTab, setDisplayWhoWeAreTab, scrollToBottom }) => {
    
     function handleClick() {
         setDisplayWhoWeAreTab(!isDisplayWhoWeAreTab)
@@ -11,7 +11,7 @@ const Header = ({ isDisplayWhoWeAreTab, setDisplayWhoWeAreTab }) => {
             <img src="./logo.png" alt="logo"/>
             <h1>FoodHero</h1>
             <div className="buttons">
-                <button>Donate</button>
+                <button onClick={scrollToBottom}>Donate</button>
                 <button onClick={handleClick}>{isDisplayWhoWeAreTab ? "Main page" : "Who we are"}</button>
             </div>
         </div>
