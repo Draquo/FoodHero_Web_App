@@ -1,6 +1,6 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
-function Contact() {
+function Contact(props) {
     const name = useRef(null)
     const surname = useRef(null)
     const phoneNumber = useRef(null)
@@ -10,11 +10,6 @@ function Contact() {
     const number = useRef(null)
 
     function checkValidation(name, surname, phoneNumber, city, postalCode, street, number) {
-        /[a-z]{2,}/.test(name.current.value) ?
-            name.current.setCustomValidity("") :
-            name.current.setCustomValidity('Please enter your name');
-
-
         /[a-z]{2,}/.test(name.current.value) ?
             name.current.setCustomValidity("") :
             name.current.setCustomValidity('Please enter your name');
@@ -82,10 +77,12 @@ function Contact() {
                     </form>
                 </div>
                 <div id="summary-container">
-                    <h2>Summary</h2>
-                    <li>element1</li>
-                    <li>element2</li>
-                    <li>element3</li>
+                    <div id="summary-list">
+                        <h2 id="summary">Summary</h2>
+                        {props.summary.map(el => (
+                            <li>{el.quantity} grams of {el.category}</li>
+                        ))}</div>
+                    <div></div>
                 </div>
             </div>
         </div>
@@ -93,3 +90,4 @@ function Contact() {
 }
 
 export default Contact;
+
