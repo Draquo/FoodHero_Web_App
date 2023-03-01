@@ -7,7 +7,7 @@ import AboutManagement from './AboutManagement'
 function WhoWeAre() {
 
     return (
-        <div className="About">
+        <div className="About shadow">
             <Motto
                 image={"https://as2.ftcdn.net/v2/jpg/00/42/22/01/1000_F_42220133_toAU6USGY9jVr2XJFLssfG00cSYIJ173.jpg"}
                 p="Industrious, passionate and committed: our team is a mighty force of changemakers living around the world."

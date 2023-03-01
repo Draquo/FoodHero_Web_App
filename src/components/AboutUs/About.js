@@ -18,7 +18,7 @@ export default class About extends Component {
    
     
     return (
-      <div className="About">
+      <div className="About shadow">
         <Motto
           image='./hungry.jpg'
           p="My dream is a better tomorrow where I'm not hungry and I don't have

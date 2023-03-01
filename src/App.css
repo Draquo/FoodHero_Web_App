@@ -55,7 +55,7 @@ div.About {
   font-family: 'Lustria', serif;
   background-color: #264653;
   position: relative;
-  z-index: 3;
+  z-index: 6;
   margin: -10px 0;
 }
 
@@ -162,7 +162,7 @@ div.who-are-you {
   display: flex;
   justify-content: space-around;
   position: relative;
-  z-index: 2;
+  z-index: 5;
   margin: -10px 0;
 }
 
@@ -182,6 +182,7 @@ div.who-are-you > button {
 div.foodlist {
   background-color: #ffa966;
   min-height: 25vw;
+  z-index: 4;
 }
 
 h1.category {
@@ -264,6 +265,7 @@ div.addToDonating {
     display: flex;
     text-align: center;
     justify-content: center;
+    
 
 }
 
@@ -271,6 +273,8 @@ div.addToDonating {
   padding: 20px;
   background-color: #e76f51;
   text-align: center;
+  z-index: 4;
+  
 }
 
 #contact-form-container {
@@ -312,6 +316,7 @@ div.addToDonating {
 .donate {
   display: flex;
   background-color: #e9c46a;
+  z-index: 2;
 }
 .information {
   width: 50%;

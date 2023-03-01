@@ -41,7 +41,7 @@ function Contact(props) {
     }
 
     return (
-        <div id="contact">
+        <div id="contact" className="shadow">
             <h1>Contact form</h1>
             <div id="form-and-summary-container">
                 <div id="contact-form-container">
