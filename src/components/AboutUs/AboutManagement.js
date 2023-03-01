@@ -17,7 +17,7 @@ function AboutManagement() {
                               <p>{person.description}</p>
                           </div>
                           <div className="managementPicture">
-                              <img src={person.img} className='managementPicture'/>
+                              <img src={person.img} className='managementPicture' alt=""/>
                           </div>
                       </h3>
                   </div>))}
