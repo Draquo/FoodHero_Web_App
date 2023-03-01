@@ -5,12 +5,16 @@ import About from './components/AboutUs/About';
 import WhoAreYou from './components/WhoAreYou';
 import Foodlist from './components/Foodlist/Foodlist';
 import Contact from './components/Contact';
+import Donate from './components/Donate';
 import WhoWeAre from './components/AboutUs/WhoWeAre';
+
 
 function App() {
   const [isDisplayWhoWeAreTab, setDisplayWhoWeAreTab] = useState(false)
   const [foodDonation, setFoodDonation] = useState({});
   const [listOfAllAlreadyAddedFoodDonations, setListOfAllAlreadyAddedFoodDonations] = useState([]);
+  const [isCustomerPrivate, setIsCustomerPrivate] = useState(false);
+  const [isCustomerRestaurant, setIsCustomerRestaurant] = useState(false);
 
   function handleInput(event, category, unit) {
     setFoodDonation({
@@ -40,17 +44,29 @@ function App() {
     ]);
   }
 
+  function togglePrivateCustomer() {
+	setIsCustomerPrivate(prevIsCustomerPrivate => !prevIsCustomerPrivate);
+	setIsCustomerRestaurant(false);
+  }
+
+  function toggleRestaurant() {
+	setIsCustomerRestaurant(prevIsCustomerRestaurant => !prevIsCustomerRestaurant)
+	setIsCustomerPrivate(false);
+  }
+
   return (
     <div className="App">
+
       <Header isDisplayWhoWeAreTab={isDisplayWhoWeAreTab} setDisplayWhoWeAreTab={setDisplayWhoWeAreTab} />
       {!isDisplayWhoWeAreTab && <About />}
       {isDisplayWhoWeAreTab && <WhoWeAre />}
-      {!isDisplayWhoWeAreTab && <WhoAreYou />}
-      {!isDisplayWhoWeAreTab && <Foodlist
+      {!isDisplayWhoWeAreTab && <WhoAreYou togglePrivateCustomer={togglePrivateCustomer} toggleRestaurant={toggleRestaurant}/>}
+      {(!isDisplayWhoWeAreTab && isCustomerPrivate) && <Foodlist
         handleClick={handleClick}
         handleInput={handleInput}
         />}
-      {!isDisplayWhoWeAreTab && <Contact summary = {listOfAllAlreadyAddedFoodDonations} />}
+      {(!isDisplayWhoWeAreTab && (isCustomerPrivate || isCustomerRestaurant)) && <Contact summary = {listOfAllAlreadyAddedFoodDonations} />}
+      <Donate />
       </div>
   );
 }
