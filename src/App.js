@@ -2,7 +2,7 @@ import './App.css';
 import { useState } from 'react';
 import Header from './components/Header';
 import About from './components/AboutUs/About';
-import WhoAreYou from './components/WhoAreYou';
+import WhoAreYou from './components/WhoAreYou/WhoAreYou';
 import Foodlist from './components/Foodlist/Foodlist';
 import Contact from './components/Contact';
 import Donate from './components/Donate';
