@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick';
-import hungry from '../../images/hungry.jpg';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Motto from './Motto';
@@ -20,7 +19,7 @@ export default class About extends Component {
     
     return (
       <div className="About">
-       <Motto image={hungry} />
+       <Motto image='./hungry.jpg' />
         <div>
           <Slider {...settings}>
             <div>
@@ -39,12 +38,12 @@ export default class About extends Component {
                   </p>
                   <h1>184 loaves of bread.</h1>
                 </div>
-                <div className="picture">picture</div>
+                <img className="picture" src='./trash.png'></img>
               </h3>
             </div>
             <div>
               <h3 className="poland">
-                <div className="picture">picture</div>
+                <img className="picture" src='./child.png'></img>
                 <div className="description">
                   <h1>In 2021,</h1>
                   <p>1.6 million people lived in extreme poverty in Poland,</p>
