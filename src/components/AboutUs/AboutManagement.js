@@ -16,7 +16,9 @@ function AboutManagement() {
                               <h3>{person.introduction}</h3>
                               <p>{person.description}</p>
                           </div>
-                          <div className="picture">picture</div>
+                          <div className="managementPicture">
+                              <img src={person.img} className='managementPicture' alt=""/>
+                          </div>
                       </h3>
                   </div>))}
           </Slider>

@@ -6,7 +6,7 @@ const Donate = () => {
   const checkValidation = (donate) => {
     /[0-9]{1,}/.test(donate.current.value)
       ? donate.current.setCustomValidity('')
-      : donate.current.setCustomValidity(`Please enter number`);
+      : donate.current.setCustomValidity(`Please enter value`);
   };
 
   return (
@@ -26,10 +26,10 @@ const Donate = () => {
           </p>
         </div>
         <div className="payment">
-          <input placeholder="25$" ref={donate}></input>
+          <input className="value" placeholder="Please enter donation $" ref={donate}></input>
           <input className='apple'
             type="submit"
-            value="DONATE WITH APPLE Pay"
+            value="DONATE WITH Pay"
             onClick={() => checkValidation(donate)}
           ></input>
            <input className='other'
