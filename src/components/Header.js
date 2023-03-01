@@ -11,8 +11,8 @@ const Header = ({ isDisplayWhoWeAreTab, setDisplayWhoWeAreTab }) => {
             <img src="./logo.png" alt="logo"/>
             <h1>FoodHero</h1>
             <div className="buttons">
-                <button className="donate">Donate</button>
-                <button className="whoweare" onClick={handleClick}>{isDisplayWhoWeAreTab ? "Main page" : "Who we are"}</button>
+                <button>Donate</button>
+                <button onClick={handleClick}>{isDisplayWhoWeAreTab ? "Main page" : "Who we are"}</button>
             </div>
         </div>
     )
