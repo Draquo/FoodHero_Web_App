@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 
 function Contact(props) {
     const name = useRef(null)
@@ -8,6 +8,7 @@ function Contact(props) {
     const postalCode = useRef(null)
     const street = useRef(null)
     const number = useRef(null)
+    const summary = useRef(null)
 
     function checkValidation(name, surname, phoneNumber, city, postalCode, street, number) {
         /[a-z]{2,}/.test(name.current.value) ?
@@ -18,7 +19,7 @@ function Contact(props) {
             surname.current.setCustomValidity("") :
             surname.current.setCustomValidity('Please enter your surname');
 
-        /[0-9]{9}/.test(phoneNumber.current.value) ?
+        /^[0-9]{9}$/.test(phoneNumber.current.value) ?
             phoneNumber.current.setCustomValidity("") :
             phoneNumber.current.setCustomValidity('Please enter 9-digit phone number');
 
@@ -26,7 +27,7 @@ function Contact(props) {
             city.current.setCustomValidity("") :
             city.current.setCustomValidity('Please enter correct city name');
 
-        /\d{2}-\d{3}/.test(postalCode.current.value) ?
+        /^\d{2}-\d{3}$/.test(postalCode.current.value) ?
             postalCode.current.setCustomValidity("") :
             postalCode.current.setCustomValidity('Please enter the postal code in the format "XX-XXX".');
 
@@ -77,11 +78,13 @@ function Contact(props) {
                     </form>
                 </div>
                 <div id="summary-container">
-                    <div id="summary-list">
+                    <div id="summary-list" ref={summary}>
                         <h2 id="summary">Summary</h2>
-                        {props.summary.map(el => (
-                            <li>{el.quantity} grams of {el.category}</li>
-                        ))}</div>
+                        {props.summary.map(el => 
+                            el.quantity === 1 ?
+                                <li id={el.category}>{el.quantity} {el.unit} of {el.category}</li> :
+                                <li id={el.category}>{el.quantity} {el.unit}s of {el.category}</li>)}
+                    </div>
                     <div></div>
                 </div>
             </div>

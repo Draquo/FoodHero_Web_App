@@ -12,37 +12,40 @@ import SimpleContact from './components/SimpleContact'
 
 function App() {
   const [isDisplayWhoWeAreTab, setDisplayWhoWeAreTab] = useState(false)
-  const [foodDonation, setFoodDonation] = useState({});
   const [listOfAllAlreadyAddedFoodDonations, setListOfAllAlreadyAddedFoodDonations] = useState([]);
   const [isCustomerPrivate, setIsCustomerPrivate] = useState(false);
   const [isCustomerRestaurant, setIsCustomerRestaurant] = useState(false);
 
-  function handleInput(event, category, unit) {
-    setFoodDonation({
-      category: category,
-      quantity: parseInt(event.target.value),
-	  unit: unit
-    });
-  }
-
-  function findIndexOfAlreadyAddedFood(category) {
-    return listOfAllAlreadyAddedFoodDonations.findIndex(
-      (food) => food.category === category
-    );
-  }
-
-  function handleClick(category) {
-    if (findIndexOfAlreadyAddedFood(category) !== -1) {
-      listOfAllAlreadyAddedFoodDonations[
-        findIndexOfAlreadyAddedFood(category)
-      ].quantity = parseInt(foodDonation.quantity);
-      setListOfAllAlreadyAddedFoodDonations(listOfAllAlreadyAddedFoodDonations);
-      return;
+  async function handleClick(event, category, unit) {
+    let foodDonation;
+    if (event.target.parentElement.children[0].value === "") {
+      console.log(2)
+      //komunikat o errorze
+    } else {
+      foodDonation = {
+        category: category,
+        quantity: event.target.parentElement.children[0].value,
+        unit: unit
+      }
     }
-    setListOfAllAlreadyAddedFoodDonations((prevList) => [
-      ...prevList,
-      foodDonation,
-    ]);
+    const newDonationsList = []
+    let updateValueOf = listOfAllAlreadyAddedFoodDonations.filter(el => el.category === foodDonation.category)
+    if (updateValueOf.length > 0) {
+      listOfAllAlreadyAddedFoodDonations.forEach(el => {
+        if (el.category === updateValueOf[0].category) {
+          newDonationsList.push(foodDonation)
+        } else {
+          newDonationsList.push(el)
+        }
+      })
+      setListOfAllAlreadyAddedFoodDonations(newDonationsList)
+    }
+    else {
+      setListOfAllAlreadyAddedFoodDonations([
+        ...listOfAllAlreadyAddedFoodDonations,
+        foodDonation
+      ])
+    }
   }
 
   function togglePrivateCustomer() {
@@ -71,7 +74,6 @@ function App() {
       {!isDisplayWhoWeAreTab && <WhoAreYou togglePrivateCustomer={togglePrivateCustomer} toggleRestaurant={toggleRestaurant}/>}
       {(!isDisplayWhoWeAreTab && isCustomerPrivate) && <Foodlist
         handleClick={handleClick}
-        handleInput={handleInput}
         />}
       {(!isDisplayWhoWeAreTab && isCustomerPrivate) && <Contact summary = {listOfAllAlreadyAddedFoodDonations} />}
       {(!isDisplayWhoWeAreTab && isCustomerRestaurant) && <SimpleContact />}
