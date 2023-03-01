@@ -1,6 +1,6 @@
 function WhoAreYou(props) {
     return (
-        <div className="who-are-you">
+        <div className="who-are-you shadow">
             <button onClick={props.toggleRestaurant}>I am a restaurant</button>
             <button onClick={props.togglePrivateCustomer}>I am a<br/>private person</button>
         </div>

@@ -4,7 +4,8 @@ import food from './food.js'
 function Foodlist(props) {
 
     return (
-        <div className="foodlist">
+
+        <div className="foodlist shadow">
             {food.map((food, index) => (
                 <div className="foodCard" key={index}>
                     <img className="food" src={food.img} alt="" />
