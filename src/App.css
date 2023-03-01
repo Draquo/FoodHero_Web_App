@@ -103,9 +103,9 @@ div.About {
   align-items: center;
 }
 
-.poland > *, .management> * {
+/* .poland > *, .management> * {
   flex: 1;
-}
+} */
 
 .poland > .description, .management > .description  {
   text-align: center;
@@ -121,9 +121,9 @@ div.About {
   background-color: #2a9d8f;
   border-radius: 25px 25px 25px 25px;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  height: 350px;
+  padding: 30px;
 }
-
-
 
 .management> div.managementPicture {
   text-align: center;

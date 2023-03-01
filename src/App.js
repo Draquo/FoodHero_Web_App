@@ -7,6 +7,7 @@ import Foodlist from './components/Foodlist/Foodlist';
 import Contact from './components/Contact';
 import Donate from './components/Donate';
 import WhoWeAre from './components/AboutUs/WhoWeAre';
+import SimpleContact from './components/SimpleContact'
 
 
 function App() {
@@ -65,7 +66,8 @@ function App() {
         handleClick={handleClick}
         handleInput={handleInput}
         />}
-      {(!isDisplayWhoWeAreTab && (isCustomerPrivate || isCustomerRestaurant)) && <Contact summary = {listOfAllAlreadyAddedFoodDonations} />}
+      {(!isDisplayWhoWeAreTab && isCustomerPrivate) && <Contact summary = {listOfAllAlreadyAddedFoodDonations} />}
+      {(!isDisplayWhoWeAreTab && isCustomerRestaurant) && <SimpleContact />}
       <Donate />
       </div>
   );
