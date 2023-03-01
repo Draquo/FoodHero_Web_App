@@ -1,31 +1,26 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick';
-import hungry from '../images/hungry.jpg';
+import hungry from '../../images/hungry.jpg';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import Motto from './Motto';
+import FoodHero from './FoodHero';
+
+export const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+};
 
 export default class About extends Component {
   render() {
-    const settings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-    };
+   
+    
     return (
-      <div className="About shadow">
-        <div className="peopleSay">
-          <img src={hungry} className="hungry" alt="hungry" />
-          <p>
-            "My dream is a better tomorrow where I'm not hungry and I don't have
-            to ask my neighbors for leftovers.
-            <br />
-            <br /> Though I'd rather die.
-            <br />
-            <br /> <strong>But unfortunately I have to live..."</strong>
-          </p>
-        </div>
+      <div className="About">
+       <Motto image={hungry} />
         <div>
           <Slider {...settings}>
             <div>
@@ -61,15 +56,7 @@ export default class About extends Component {
             </div>
           </Slider>
         </div>
-        <div className="foodhero">
-          <h2>FoodHero</h2>
-          <p>
-            distributes thousands of kilos of food to hundreds of thousands of
-            needy neighbors, making us the leading famine relief organization in
-            our region
-          </p>
-        </div>
-          <div className='freespace'></div>
+        <FoodHero />
       </div>
     );
   }

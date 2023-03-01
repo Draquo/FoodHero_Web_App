@@ -59,7 +59,7 @@ div.About {
   margin: -10px 0;
 }
 
-.About > .peopleSay {
+.About > .motto {
   padding: 25px;
   background-color: #2a9d8f;
   display: flex;
@@ -69,11 +69,11 @@ div.About {
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 
-.peopleSay > * {
+.motto > * {
   flex: 1;
 }
 
-.peopleSay > :first-child {
+.motto > :first-child {
   text-align: left;
   padding-bottom: 15px;
   margin-left: 15px;
@@ -81,7 +81,7 @@ div.About {
   border-radius: 35px;
 }
 
-.peopleSay > :nth-child(2) {
+.motto > :nth-child(2) {
   text-align: left;
   margin-left: 7%;
   font-style: italic;
@@ -100,7 +100,7 @@ div.About {
   flex: 1;
 }
 
-.poland > .description, .management>.description  {
+.poland > .description, .management > .description  {
   text-align: center;
   padding: 25px;
   font-size: large;
@@ -108,7 +108,7 @@ div.About {
   color: #2a9d8f;
 }
 
-.poland > .picture, .management>.picture {
+.poland > .picture, .management > .picture {
   text-align: center;
   font-size: large;
   background-color: #2a9d8f;
@@ -159,39 +159,74 @@ div.who-are-you > button {
 }
 
 div.foodlist {
-  background-color: #f4a261;
-  max-width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  position: relative;
-  z-index: 1;
-  margin: -10px 0;
+  background-color: #ffa966;
+  min-height: 25vw;
 }
 
 h1.category {
-  font-size: small;
-  margin-bottom: 4vw;
+font-family: 'Lustria', serif;
+font-size: small;
+margin-bottom: 4vw;
 }
 
 div.foodCard {
-  text-align: center;
-  background-color: #f4a261;
-  min-width: 15%;
-  max-width: 20%;
-  min-height: 18vw;
-  max-height: 20vw;
-  margin: 0 7.5% 1vw 7.5%;
-  border: 1px solid rgba(238, 141, 61, 0.874);
-  border-radius: 5%;
-  overflow: hidden;
+    text-align: center;
+    background-color: #F4A261;    
+    min-width: 15%;
+    max-width: 40%;
+    min-height: 18vw;
+    max-height: 20vw;
+    margin: 6.5% 7.5% 5% 7.5%;
+    border: 1px solid rgba(238, 141, 61, 0.874);
+    border-radius: 5%;
+    overflow: hidden;
+    box-shadow: rgb(0 0 0 / 45%) 0px 25px 20px -20px;
 }
 
 img.food {
   max-width: 12vw;
 }
 
+
+.arrows {
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+
+.material-symbols-outlined {
+  font-size: xx-large;
+  font-display:initial;
+  color: #264653;
+}
+
+
+.arrow {
+  margin: 15px;
+  width: 80px;
+  height: 40px;
+  cursor: pointer;
+}
+
 input.quantity {
-  min-width: 70%;
+font-size: 1em;
+padding: 3px;
+min-width: 70%;
+border-image: linear-gradient(#E9C46A, #E76F51);
+padding: 3px;
+border-radius: 9999em;
+
+}
+
+div.addToDonating>button {
+  font-family: 'Lustria', serif;
+  margin: 5%;
+  padding: 3%;
+  cursor: pointer;
+  border: double 1px ;
+  background-color: #F4A261;
+  color: black;
+  
 }
 
 button.addFoodButton {
