@@ -1,3 +1,7 @@
+.App{
+  width: 100vw;
+}
+
 .shadow {
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   border-radius: 0px 0px 25px 25px;
@@ -23,10 +27,9 @@ iframe {
 div.header {
   display: flex;
   z-index: 10;
-  height: 10vh;
-  min-width: 94vw;
+  height: 17vh;
+  width: 100vw;
   position: fixed;
-  padding: 30px;
   align-items: center;
   background-color: #264653;
   color: #e9c46a;
@@ -36,6 +39,7 @@ div.header {
 
 div.header>img {
   width: 70px;
+  margin-left: 30px;
 }
 
 div.header>h1 {
@@ -43,7 +47,7 @@ div.header>h1 {
 }
 
 div.header button {
-  margin-right: 15px;
+  margin-right: 40px;
   width: 160px;
   height: 50px;
   cursor: pointer;
