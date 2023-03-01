@@ -175,9 +175,16 @@ div.who-are-you {
   position: relative;
   z-index: 2;
   margin: -10px 0;
+  flex-direction: column;
+text-align: center;
 }
 
-div.who-are-you>button {
+div.whoAreYouButtons {
+  display: flex;
+    justify-content: space-around;
+}
+
+div.whoAreYouButtons > button {
   width: 170px;
   height: 80px;
   font-family: 'Lustria', serif;
@@ -188,6 +195,7 @@ div.who-are-you>button {
   border: none;
   background-color: #e9c46a;
   color: #264653;
+  
 }
 
 div.foodlist {
