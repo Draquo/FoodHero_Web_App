@@ -50,7 +50,7 @@ div.header button {
 }
 
 div.About {
-  padding: 0px;
+  padding: 1px;
   color: black;
   font-family: 'Lustria', serif;
   background-color: #264653;
@@ -147,7 +147,7 @@ box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1p
   background-color: #2a9d8f;
   padding: 20px;
   color: black;
-  margin: 5% 12% 0% 12%;
+  margin: 5% 12% 5% 12%;
   font-size: xx-large;
   border-radius: 25px 25px 25px 25px;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
