@@ -168,6 +168,7 @@ img.managementPicture {
 
 div.who-are-you {
   background-color: #e9c46a;
+  top: 18vh;
   padding: 40px;
   display: flex;
   justify-content: space-around;
@@ -192,6 +193,8 @@ div.who-are-you>button {
 div.foodlist {
   background-color: #ffa966;
   min-height: 25vw;
+  position: relative;
+  top:19vh;
 }
 
 h1.category {
@@ -281,6 +284,8 @@ div.addToDonating {
   padding: 20px;
   background-color: #e76f51;
   text-align: center;
+  position: relative;
+  top:19vh;
 }
 
 #contact-form-container {
@@ -322,6 +327,8 @@ div.addToDonating {
 .donate {
   display: flex;
   background-color: #e9c46a;
+  top: 18vh;
+  position: relative;
 }
 
 .information {
