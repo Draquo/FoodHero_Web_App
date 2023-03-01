@@ -1,12 +1,11 @@
 import './App.css';
 import { useState } from 'react';
 import Header from './components/Header';
-import About from './components/About';
+import About from './components/AboutUs/About';
 import WhoAreYou from './components/WhoAreYou';
-import Foodlist from './components/Foodlist';
+import Foodlist from './components/Foodlist/Foodlist';
 import Contact from './components/Contact';
-import WhoWeAre from './components/WhoWeAre';
-import Map from './components/Map';
+import WhoWeAre from './components/AboutUs/WhoWeAre';
 
 function App() {
   const [isDisplayWhoWeAreTab, setDisplayWhoWeAreTab] = useState(false)
@@ -46,7 +45,6 @@ function App() {
       <Header isDisplayWhoWeAreTab={isDisplayWhoWeAreTab} setDisplayWhoWeAreTab={setDisplayWhoWeAreTab} />
       {!isDisplayWhoWeAreTab && <About />}
       {isDisplayWhoWeAreTab && <WhoWeAre />}
-      {isDisplayWhoWeAreTab && <Map />}
       {!isDisplayWhoWeAreTab && <WhoAreYou />}
       {!isDisplayWhoWeAreTab && <Foodlist
         handleClick={handleClick}
