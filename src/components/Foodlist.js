@@ -16,8 +16,9 @@ function Foodlist(props) {
                                 min="1"
                                 max="100"
                                 placeholder={food.unit}
-                                onChange={(event) => props.handleInput(event, food.category, food.unit)} />
-                            <button className={food.category} onClick={() => props.handleClick(food.category)}>ADD</button>
+                                // onChange={(event) => props.handleInput(event, food.category, food.unit)} 
+                                />
+                            <button className={food.category} onClick={(event) => props.handleClick(event, food.category, food.unit)}>ADD</button>
                         </div>
                     </div>
             ))}

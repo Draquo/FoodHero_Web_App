@@ -8,37 +8,49 @@ import Foodlist from "./components/Foodlist";
 import Contact from "./components/Contact";
 
 function App() {
-  const [foodDonation, setFoodDonation] = useState({});
   const [listOfAllAlreadyAddedFoodDonations, setListOfAllAlreadyAddedFoodDonations] = useState([]);
 
+
   function handleInput(event, category, unit) {
-    setFoodDonation({
-      category: category,
-      quantity: parseInt(event.target.value),
-	  unit: unit
-    });
+    // setFoodDonation({
+    //   category: category,
+    //   quantity: parseInt(event.target.value),
+    //   unit: unit
+    // });
   }
 
-console.log(listOfAllAlreadyAddedFoodDonations)
 
-  function findIndexOfAlreadyAddedFood(category) {
-    return listOfAllAlreadyAddedFoodDonations.findIndex(
-      (food) => food.category === category
-    );
-  }
-
-  function handleClick(category) {
-    if (findIndexOfAlreadyAddedFood(category) !== -1) {
-      listOfAllAlreadyAddedFoodDonations[
-        findIndexOfAlreadyAddedFood(category)
-      ].quantity = parseInt(foodDonation.quantity);
-      setListOfAllAlreadyAddedFoodDonations(listOfAllAlreadyAddedFoodDonations);
-      return;
+  async function handleClick(event, category, unit) {
+    console.log(category, unit, event.target.parentElement.children[0].value)
+    let foodDonation;
+    if (event.target.parentElement.children[0].value === "") {
+      console.log(2)
+      //informacja o errorze
+    } else {
+      foodDonation = {
+        category: category,
+        quantity: event.target.parentElement.children[0].value,
+        unit: unit
+      }
     }
-    setListOfAllAlreadyAddedFoodDonations((prevList) => [
-      ...prevList,
-      foodDonation,
-    ]);
+    const newDonationsList = []
+    let updateValueOf = listOfAllAlreadyAddedFoodDonations.filter(el => el.category === foodDonation.category)
+    if (updateValueOf.length > 0) {
+      listOfAllAlreadyAddedFoodDonations.forEach(el => {
+        if (el.category === updateValueOf[0].category) {
+          newDonationsList.push(foodDonation)
+        } else {
+          newDonationsList.push(el)
+        }
+      })
+      setListOfAllAlreadyAddedFoodDonations(newDonationsList)
+    }
+    else {
+      setListOfAllAlreadyAddedFoodDonations([
+        ...listOfAllAlreadyAddedFoodDonations,
+        foodDonation
+      ])
+    }
   }
 
   return (
@@ -46,11 +58,11 @@ console.log(listOfAllAlreadyAddedFoodDonations)
       <Header />
       <About />
       <WhoAreYou />
-      <Foodlist        
+      <Foodlist
         handleClick={handleClick}
         handleInput={handleInput}
       />
-      <Contact summary = {listOfAllAlreadyAddedFoodDonations}/>
+      <Contact summary={listOfAllAlreadyAddedFoodDonations} />
     </div>
   );
 }
