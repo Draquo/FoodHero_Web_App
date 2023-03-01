@@ -61,7 +61,7 @@ div.About {
   font-family: 'Lustria', serif;
   background-color: #264653;
   position: relative;
-  z-index: 6;
+  z-index: 8;
   margin: -10px 0;
 }
 
@@ -173,7 +173,7 @@ div.who-are-you {
   display: flex;
   justify-content: space-around;
   position: relative;
-  z-index: 5;
+  z-index: 6;
   margin: -10px 0;
   flex-direction: column;
 text-align: center;
@@ -201,7 +201,7 @@ div.whoAreYouButtons > button {
 div.foodlist {
   background-color: #ffa966;
   min-height: 25vw;
-  z-index: 4;
+  z-index: 5;
   position: relative;
   top:19vh;
 }
@@ -235,6 +235,7 @@ img.food {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  z-index: 4;
 }
 
 .material-symbols-outlined {
@@ -293,7 +294,7 @@ div.addToDonating {
   padding: 20px;
   background-color: #e76f51;
   text-align: center;
-  z-index: 4;
+  z-index: 3;
   
   position: relative;
   top:19vh;
