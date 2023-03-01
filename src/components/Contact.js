@@ -81,8 +81,6 @@ function Contact(props) {
                     <div id="summary-list" ref={summary}>
                         <h2 id="summary">Summary</h2>
                         {props.summary.map(el => 
-                        // !el.quantity.isInteger() ?
-                        //     "" :
                             el.quantity === 1 ?
                                 <li id={el.category}>{el.quantity} {el.unit} of {el.category}</li> :
                                 <li id={el.category}>{el.quantity} {el.unit}s of {el.category}</li>)}

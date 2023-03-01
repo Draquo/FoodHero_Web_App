@@ -12,26 +12,15 @@ import SimpleContact from './components/SimpleContact'
 
 function App() {
   const [isDisplayWhoWeAreTab, setDisplayWhoWeAreTab] = useState(false)
-  const [foodDonation, setFoodDonation] = useState({});
   const [listOfAllAlreadyAddedFoodDonations, setListOfAllAlreadyAddedFoodDonations] = useState([]);
   const [isCustomerPrivate, setIsCustomerPrivate] = useState(false);
   const [isCustomerRestaurant, setIsCustomerRestaurant] = useState(false);
 
-  function handleInput(event, category, unit) {
-    // setFoodDonation({
-    //   category: category,
-    //   quantity: parseInt(event.target.value),
-    //   unit: unit
-    // });
-  }
-
-
   async function handleClick(event, category, unit) {
-    console.log(category, unit, event.target.parentElement.children[0].value)
     let foodDonation;
     if (event.target.parentElement.children[0].value === "") {
       console.log(2)
-      //informacja o errorze
+      //komunikat o errorze
     } else {
       foodDonation = {
         category: category,
@@ -59,16 +48,6 @@ function App() {
     }
   }
 
-  function handleClick(category) {
-    if (findIndexOfAlreadyAddedFood(category) !== -1) {
-      listOfAllAlreadyAddedFoodDonations[
-        findIndexOfAlreadyAddedFood(category)
-      ].quantity = parseInt(foodDonation.quantity);
-      setListOfAllAlreadyAddedFoodDonations(listOfAllAlreadyAddedFoodDonations);
-      return;
-    }
-  }
-
   function togglePrivateCustomer() {
 	setIsCustomerPrivate(prevIsCustomerPrivate => !prevIsCustomerPrivate);
 	setIsCustomerRestaurant(false);
@@ -88,7 +67,6 @@ function App() {
       {!isDisplayWhoWeAreTab && <WhoAreYou togglePrivateCustomer={togglePrivateCustomer} toggleRestaurant={toggleRestaurant}/>}
       {(!isDisplayWhoWeAreTab && isCustomerPrivate) && <Foodlist
         handleClick={handleClick}
-        handleInput={handleInput}
         />}
       {(!isDisplayWhoWeAreTab && isCustomerPrivate) && <Contact summary = {listOfAllAlreadyAddedFoodDonations} />}
       {(!isDisplayWhoWeAreTab && isCustomerRestaurant) && <SimpleContact />}
