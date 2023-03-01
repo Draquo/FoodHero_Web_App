@@ -65,10 +65,17 @@ function App() {
     })
   }
 
+  function scrollToUp() {
+    window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+    })
+  }
+
   return (
     <div className="App">
 
-      <Header isDisplayWhoWeAreTab={isDisplayWhoWeAreTab} setDisplayWhoWeAreTab={setDisplayWhoWeAreTab} scrollToBottom={scrollToBottom} />
+      <Header isDisplayWhoWeAreTab={isDisplayWhoWeAreTab} setDisplayWhoWeAreTab={setDisplayWhoWeAreTab} scrollToBottom={scrollToBottom} scrollToUp={scrollToUp} />
       {!isDisplayWhoWeAreTab && <About />}
       {isDisplayWhoWeAreTab && <WhoWeAre />}
       {!isDisplayWhoWeAreTab && <WhoAreYou togglePrivateCustomer={togglePrivateCustomer} toggleRestaurant={toggleRestaurant}/>}
