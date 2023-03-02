@@ -22,9 +22,21 @@ In the project directory, you can run:
 ### `npm start`
 ```
 
-![](public/readmeIllustration.png)
-
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+## Illustrations
+![](public/readmeIllustration.png)
+
+## Features:
+* Send us your contact info via website
+* Get basic info about our organisation
+* Support our organisation financially
+
+
+### To Do:
+* Implement website responsiveness
+
+
 
 
