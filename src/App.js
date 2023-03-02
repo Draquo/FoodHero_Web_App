@@ -12,49 +12,43 @@ import SimpleContact from './components/SimpleContact'
 
 function App() {
   const [isDisplayWhoWeAreTab, setDisplayWhoWeAreTab] = useState(false)
-  const [listOfAllAlreadyAddedFoodDonations, setListOfAllAlreadyAddedFoodDonations] = useState([]);
+  const [listOfAllAddedFoodDonations, setListOfAllAddedFoodDonations] = useState([]);
   const [isCustomerPrivate, setIsCustomerPrivate] = useState(false);
   const [isCustomerRestaurant, setIsCustomerRestaurant] = useState(false);
 
-  async function handleClick(event, category, unit) {
-    let foodDonation;
-    if (event.target.parentElement.children[0].value === "") {
+  function handleClick(event, category, unit) {
+    const eventValue = event.target.parentElement.children[0].value
+    if (eventValue === "") {
       return;
-    } else {
-      foodDonation = {
-        category: category,
-        quantity: event.target.parentElement.children[0].value,
-        unit: unit
-      }
     }
-    const newDonationsList = []
-    let updateValueOf = listOfAllAlreadyAddedFoodDonations.filter(el => el.category === foodDonation.category)
-    if (updateValueOf.length > 0) {
-      listOfAllAlreadyAddedFoodDonations.forEach(el => {
-        if (el.category === updateValueOf[0].category) {
-          newDonationsList.push(foodDonation)
-        } else {
-          newDonationsList.push(el)
-        }
-      })
-      setListOfAllAlreadyAddedFoodDonations(newDonationsList)
-    }
-    else {
-      setListOfAllAlreadyAddedFoodDonations([
-        ...listOfAllAlreadyAddedFoodDonations,
-        foodDonation
-      ])
+    let foodDonation = setFoodDonation(category, eventValue, unit)
+    const index = listOfAllAddedFoodDonations.findIndex(el => el.category === category);
+    index === -1 ? setListOfAllAddedFoodDonations(prevList => [...prevList, foodDonation]) :
+    updateQuantityOfDonatedFood(index, foodDonation)
+  }
+
+  function updateQuantityOfDonatedFood(index, foodDonation) {
+      const newDonationsList = [...listOfAllAddedFoodDonations];
+      newDonationsList[index] = foodDonation;
+      setListOfAllAddedFoodDonations(newDonationsList);
+  }
+
+  function setFoodDonation(category, eventValue, unit) {
+    return {
+      category: category,
+      quantity: eventValue,
+      unit: unit,
     }
   }
 
   function togglePrivateCustomer() {
-	setIsCustomerPrivate(prevIsCustomerPrivate => !prevIsCustomerPrivate);
-	setIsCustomerRestaurant(false);
+	  setIsCustomerPrivate(prevIsCustomerPrivate => !prevIsCustomerPrivate);
+	  setIsCustomerRestaurant(false);
   }
 
   function toggleRestaurant() {
-	setIsCustomerRestaurant(prevIsCustomerRestaurant => !prevIsCustomerRestaurant)
-	setIsCustomerPrivate(false);
+	  setIsCustomerRestaurant(prevIsCustomerRestaurant => !prevIsCustomerRestaurant);
+	  setIsCustomerPrivate(false);
   }
 
   function scrollToBottom() {
@@ -64,7 +58,7 @@ function App() {
     })
   }
 
-  function scrollToUp() {
+  function scrollToTop() {
     window.scrollTo({
     top: 0,
     behavior: 'smooth'
@@ -73,18 +67,17 @@ function App() {
 
   return (
     <div className="App">
-
-      <Header isDisplayWhoWeAreTab={isDisplayWhoWeAreTab} setDisplayWhoWeAreTab={setDisplayWhoWeAreTab} scrollToBottom={scrollToBottom} scrollToUp={scrollToUp} />
+      <Header isDisplayWhoWeAreTab={isDisplayWhoWeAreTab} setDisplayWhoWeAreTab={setDisplayWhoWeAreTab} scrollToBottom={scrollToBottom} scrollToTop={scrollToTop} />
       {!isDisplayWhoWeAreTab && <About />}
       {isDisplayWhoWeAreTab && <WhoWeAre />}
       {!isDisplayWhoWeAreTab && <WhoAreYou togglePrivateCustomer={togglePrivateCustomer} toggleRestaurant={toggleRestaurant}/>}
       {(!isDisplayWhoWeAreTab && isCustomerPrivate) && <Foodlist
         handleClick={handleClick}
         />}
-      {(!isDisplayWhoWeAreTab && isCustomerPrivate) && <Contact summary = {listOfAllAlreadyAddedFoodDonations} />}
+      {(!isDisplayWhoWeAreTab && isCustomerPrivate) && <Contact summary = {listOfAllAddedFoodDonations} />}
       {(!isDisplayWhoWeAreTab && isCustomerRestaurant) && <SimpleContact />}
       <Donate />
-      </div>
+    </div>
   );
 }
 

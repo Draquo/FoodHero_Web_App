@@ -21,9 +21,8 @@ function Contact(props) {
             phoneNumber.current.setCustomValidity('Please enter 9-digit phone number');
 
         /[a-z]{2,}/.test(restaurantName.current.value) ?
-        surname.current.setCustomValidity("") :
-        surname.current.setCustomValidity('Please enter restaurant name');
-
+            surname.current.setCustomValidity("") :
+            surname.current.setCustomValidity('Please enter restaurant name');
     }
 
     return (

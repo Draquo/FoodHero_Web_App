@@ -5,7 +5,6 @@ import Map from './Map';
 import AboutManagement from './AboutManagement'
 
 function WhoWeAre() {
-
     return (
         <div className="About shadow">
             <Motto
@@ -18,6 +17,6 @@ function WhoWeAre() {
             <Map />
         </div>
     );
-
 }
+
 export default WhoWeAre;

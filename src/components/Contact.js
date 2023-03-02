@@ -80,11 +80,11 @@ function Contact(props) {
                 <div id="summary-container">
                     <div id="summary-list" ref={summary}>
                         <h2 id="summary">Summary</h2>
-                        {props.summary.map(el =>
+                        {props.summary.map((el,index) =>
                             el.quantity === "0" ?
                                 "" : el.quantity === "1" ?
-                                    <li id={el.category}>{el.quantity} {el.unit} of {el.category}</li> :
-                                    <li id={el.category}>{el.quantity} {el.unit}s of {el.category}</li>)}
+                                    <li key={index} id={el.category}>{el.quantity} {el.unit} of {el.category}</li> :
+                                    <li key={index} id={el.category}>{el.quantity} {el.unit}s of {el.category}</li>)}
                     </div>
                     <div></div>
                 </div>

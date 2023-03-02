@@ -1,6 +1,4 @@
-import React from "react";
 import JoinUs from "./JoinUs";
-
 
 function WhoAreYou(props) {
     return (
@@ -8,7 +6,7 @@ function WhoAreYou(props) {
             <JoinUs />
             <div className="whoAreYouButtons">
             <button onClick={props.toggleRestaurant}>I am a restaurant</button>
-                <button onClick={props.togglePrivateCustomer}>I am a<br />private person</button>
+            <button onClick={props.togglePrivateCustomer}>I am a<br />private person</button>
             </div>
         </div>
     )
