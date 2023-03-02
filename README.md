@@ -10,6 +10,7 @@ Web App in Node.js and React.
 * [Features](#features)
 
 ## General info
+Website of Food Hero - a non-governmental organization that connects people who want to donate food with those who need it.
 
 ## Technologies
 * JavaScript
