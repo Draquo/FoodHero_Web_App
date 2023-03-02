@@ -2,13 +2,9 @@ import React, { useState } from 'react'
 import VisibilitySensor from 'react-visibility-sensor'
 import TypingTitle from './TypingTitle';
 
-
-
-
 function JoinUs() {
   const [isVisible, setVisible] = useState(false);
 
- 
   return (
     <div className='joinUsDescription'>
       <VisibilitySensor onChange={(visible) => setVisible(visible)}>
