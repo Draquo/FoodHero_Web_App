@@ -5,7 +5,7 @@ const TypingTitle = () => {
   return (
     <div className="typingTitle">
       <TypingText
-        text={"Join our foundation in the fight against hunger by volunteering to donate your unused food."}
+        text={"Join our foundation in the fight against hunger!"}
         speed={1.7} />
     </div>
       )
