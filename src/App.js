@@ -19,8 +19,7 @@ function App() {
   async function handleClick(event, category, unit) {
     let foodDonation;
     if (event.target.parentElement.children[0].value === "") {
-      console.log(2)
-      //komunikat o errorze
+      return;
     } else {
       foodDonation = {
         category: category,
