@@ -4,8 +4,8 @@ Web App in Node.js and React.
 
 ## Table of contents
 * [General info](#general-info)
-* [Technologies]
-* [Setup]
+* [Technologies] (#Technologies)
+* [Setup] (#Setup)
 
 ## General info
 
