@@ -110,7 +110,7 @@ div.About {
 .management {
   padding: 25px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -449,3 +449,7 @@ div.joinUsDescription>h1,h3 {
   font-family: 'Lustria', serif;
 }
 
+div.typingTitle {
+  font-size: 35px;
+font-family: 'Lato';
+}

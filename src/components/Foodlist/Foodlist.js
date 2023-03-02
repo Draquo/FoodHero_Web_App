@@ -1,5 +1,5 @@
 import { React, useRef } from 'react'
-import food from './food.js';
+import food from '../../data/food';
 import Slider from 'react-slick';
 import Arrows from './Arrows.js';
 
