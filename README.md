@@ -3,7 +3,7 @@
 Web App in Node.js and React.
 
 ## Table of contents
-* [General info]
+* [General info](#general-info)
 * [Technologies]
 * [Setup]
 

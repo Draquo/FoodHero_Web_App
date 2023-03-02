@@ -448,3 +448,7 @@ div.joinUsDescription>h1 {
 div.joinUsDescription>h1,h3 {
   font-family: 'Lustria', serif;
 }
+
+#general-info {
+  color: pink
+}
