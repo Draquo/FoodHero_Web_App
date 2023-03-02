@@ -1,5 +1,5 @@
 import React from 'react'
-import infoAboutManagement from './infoAboutManagement';
+import infoAboutManagement from '../../data/infoAboutManagement';
 import Slider from 'react-slick';
 import { settings } from './About';
 
