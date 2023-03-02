@@ -4,10 +4,10 @@ Web App in Node.js and React.
 
 ## Table of contents
 * [General info](#general-info)
-* [Technologies] (#technologies)
-* [Setup] (#setup)
-* [Illustrations] (#illustrations)
-* [Features] (#features)
+* [Technologies](#technologies)
+* [Setup](#setup)
+* [Illustrations](#illustrations)
+* [Features](#features)
 
 ## General info
 
