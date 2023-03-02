@@ -45,40 +45,40 @@ function Contact(props) {
             <h1>Contact form</h1>
             <div id="form-and-summary-container">
                 <div id="contact-form-container">
-                    <form id="contact-form">
+                    <form id="contact-form"  className="shadow">
                         <h2>Contact info</h2>
                         <div id="contact-container">
                             <div>
-                                Name: <div><input placeholder="Name" ref={name}>
+                               <div><input placeholder="Name" ref={name}>
                                 </input></div>
-                                Surname: <div><input placeholder="Surname" ref={surname}>
+                                <div><input placeholder="Surname" ref={surname}>
                                 </input></div>
                             </div>
                             <div>
-                                Phone number: <div><input placeholder="Phone number" ref={phoneNumber}>
+                                <div><input placeholder="Phone number" ref={phoneNumber}>
                                 </input></div>
                             </div>
                         </div>
                         <h2>Adress Info</h2>
                         <div id="adress-container">
                             <div>
-                                City: <div><input placeholder="City" ref={city}>
+                                <div><input placeholder="City" ref={city}>
                                 </input></div>
-                                Postal code: <div><input placeholder="Postal code" ref={postalCode}>
+                                <div><input placeholder="Postal code" ref={postalCode}>
                                 </input></div>
                             </div>
                             <div>
-                                Street: <div><input placeholder="Street" ref={street}>
+                                <div><input placeholder="Street" ref={street}>
                                 </input></div>
-                                Number: <div><input placeholder="Number" ref={number}>
+                                <div><input placeholder="Number" ref={number}>
                                 </input></div>
                             </div>
                         </div>
-                        <div><input type="submit" value="Submit" onClick={() => checkValidation(name, surname, phoneNumber, city, postalCode, street, number)}></input></div>
+                        <div><button type="submit" value="Submit" onClick={() => checkValidation(name, surname, phoneNumber, city, postalCode, street, number)}>SUBMIT</button></div>
                     </form>
                 </div>
                 <div id="summary-container">
-                    <div id="summary-list" ref={summary}>
+                    <div id="summary-list" ref={summary} className="shadow">
                         <h2 id="summary">Summary</h2>
                         {props.summary.map((el,index) =>
                             el.quantity === "0" ?

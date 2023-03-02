@@ -190,10 +190,10 @@ div.whoAreYouButtons {
 }
 
 div.whoAreYouButtons > button {
-  width: 170px;
+  width: 205px;
   height: 80px;
   font-family: 'Lustria', serif;
-  font-size: 25px;
+  font-size: 30px;
   font-weight: bold;
   padding: 0;
   cursor: pointer;
@@ -206,9 +206,15 @@ div.whoAreYouButtons > button {
 div.foodlist {
   background-color: #ffa966;
   min-height: 25vw;
+  padding-top: 30px;
   z-index: 5;
   position: relative;
   top:19vh;
+}
+
+div.foodlist > h1{
+  text-align: center;
+  font-family: 'Lustria', serif;
 }
 
 h1.category {
@@ -271,6 +277,7 @@ div.addToDonating>button {
   font-family: 'Lustria', serif;
   margin: 5%;
   padding: 3%;
+  border-radius: 8px;
   cursor: pointer;
   border: double 1px;
   background-color: #F4A261;
@@ -291,8 +298,8 @@ div.addToDonating {
 #form-and-summary-container {
   display: flex;
   text-align: center;
-  justify-content: center;
-
+  justify-content: space-evenly;
+  font-family: 'Lato';
 }
 
 #contact {
@@ -300,22 +307,45 @@ div.addToDonating {
   background-color: #e76f51;
   text-align: center;
   z-index: 3;
-  
   position: relative;
   top:19vh;
+}
+
+#contact input{
+  border: none;
+  margin: 10px;
+  background-color: #F4A261;
+  border-bottom: 1px solid;
+}
+
+#contact>h1 {
+  font-family: 'Lustria', serif;
+  font-size: 48px;
+
 }
 
 #contact-form-container {
   display: flex;
   flex-wrap: wrap;
-  min-width: 50vw;
   max-width: 50vw;
+  margin-bottom: 30px;
 }
 
 #contact-form {
   padding: 20px;
-  background-color: firebrick;
+  background-color: #F4A261;
   border-radius: 15%;
+}
+
+#contact-form button {
+  font-size: 18px;
+  border-radius: 12px;
+  margin: 5%;
+  padding: 3%;
+  cursor: pointer;
+  border: double 1px;
+  background-color: #F4A261;
+  color: black;
 }
 
 #summary {
@@ -323,8 +353,8 @@ div.addToDonating {
 }
 
 #summary-container {
-
   max-width: 50vw;
+  min-width: 23vw;
 }
 
 #adress-container,
@@ -336,7 +366,7 @@ div.addToDonating {
 
 #summary-list {
   padding: 20px;
-  background-color: firebrick;
+  background-color: #F4A261;
   border-radius: 25%;
 
 }
@@ -350,17 +380,33 @@ div.addToDonating {
   margin-top: -10px;
 }
 
+.donate>form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 50%;
-  margin-left: 25%;
   margin-top: 50px;
   font-size: xx-large;
+  font-family: 'Lato';
+}
+
+.information>h1 {
+  font-family: 'Lustria', serif;
+}
+
+.information>p {
+  text-align: justify;
 }
 
 .payment {
   display: flex;
   flex-direction: column;
-  margin-left: 25%;
   width: 15%;
   margin-bottom: 40px;
 
@@ -389,4 +435,16 @@ div.addToDonating {
 
 .value {
   text-align: center;
+}
+
+div.joinUsDescription {
+  font-family: 'Lato';
+}
+
+div.joinUsDescription>h1 {
+  font-size: 48px;
+}
+
+div.joinUsDescription>h1,h3 {
+  font-family: 'Lustria', serif;
 }

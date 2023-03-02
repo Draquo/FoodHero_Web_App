@@ -34,19 +34,19 @@ function Contact(props) {
                         <h2>Contact info</h2>
                         <div id="contact-container">
                             <div>
-                                Name: <div><input placeholder="Name" ref={name}>
+                                <div><input placeholder="Name" ref={name}>
                                 </input></div>
-                                Surname: <div><input placeholder="Surname" ref={surname}>
+                                <div><input placeholder="Surname" ref={surname}>
                                 </input></div>
                             </div>
                             <div>
-                                Restaurant name: <div><input placeholder="Restaurant name" ref={restaurantName}>
+                                <div><input placeholder="Restaurant name" ref={restaurantName}>
                                 </input></div>
-                                Phone number: <div><input placeholder="Phone number" ref={phoneNumber}>
+                                <div><input placeholder="Phone number" ref={phoneNumber}>
                                 </input></div>
                             </div>
                         </div>
-                        <div><input type="submit" value="Submit" onClick={() => checkValidation(name, surname, phoneNumber, restaurantName)}></input></div>
+                        <div><button type="submit" value="Submit" onClick={() => checkValidation(name, surname, phoneNumber, restaurantName)}>SUBMIT</button></div>
                     </form>
                 </div>
             </div>

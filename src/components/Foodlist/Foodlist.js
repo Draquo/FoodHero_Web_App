@@ -16,6 +16,7 @@ function Foodlist(props) {
 
     return (
         <div className='foodlist'>
+            <h1>Pick products that you would like to donate</h1>
             <Slider ref={slider} {...settings}>
                 {food.map((food, index) => (
                     <div className="foodCard" key={index}>
