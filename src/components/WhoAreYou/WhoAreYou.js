@@ -1,6 +1,4 @@
-import React from "react";
 import JoinUs from "./JoinUs";
-
 
 function WhoAreYou(props) {
     return (
