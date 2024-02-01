@@ -5,11 +5,20 @@ function Contact(props) {
     const surname = useRef(null)
     const phoneNumber = useRef(null)
     const restaurantName = useRef(null)
+    const greatings = `
+        Dear,
+
+        We would like to inform you that our volunteer will be in touch with you shortly to discuss further details and arrange for any necessary actions. We are grateful for your willingness to help and your dedication to our cause.
+
+        Thank you for your contact and for being part of our community. We look forward to working with you to make a positive impact.
+
+        Best regards,
+        FoodHero`
 
 
     function checkValidation(name, surname, phoneNumber, restaurantName) {
         /[a-z]{2,}/.test(name.current.value) ?
-            name.current.setCustomValidity("") :
+            alert(greatings) :
             name.current.setCustomValidity('Please enter your name');
 
         /[a-z]{2,}/.test(surname.current.value) ?

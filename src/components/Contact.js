@@ -9,10 +9,21 @@ function Contact(props) {
     const street = useRef(null)
     const number = useRef(null)
     const summary = useRef(null)
+    const greatings = `
+    Dear,
+
+    Thank you so much for donating items to our organization. We truly appreciate your generosity and your commitment to our cause.
+    
+    We would like to inform you that our volunteer will be contacting you soon to arrange for the pickup of the donated items. Your kindness will help us make a real difference in the lives of those we serve, and we are grateful for your support.
+    
+    Once again, thank you for your donation and for believing in our mission.
+    
+    Best regards,
+    FoodHero`
 
     function checkValidation(name, surname, phoneNumber, city, postalCode, street, number) {
         /[a-z]{2,}/.test(name.current.value) ?
-            name.current.setCustomValidity("") :
+            alert(greatings) :
             name.current.setCustomValidity('Please enter your name');
 
         /[a-z]{2,}/.test(surname.current.value) ?

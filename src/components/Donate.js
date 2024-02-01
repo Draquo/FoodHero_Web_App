@@ -4,11 +4,18 @@ const Donate = () => {
   const donate = useRef(null);
 
   const checkValidation = (donate) => {
-    /[0-9]{1,}/.test(donate.current.value)
-      ? donate.current.setCustomValidity('')
-      : donate.current.setCustomValidity(`Please enter value`);
-  };
+    if (/[0-9]{1,}/.test(donate.current.value)) {
+      alert(`
+      Dear Donor,
+      Thank you for your donation to our foundation. 
+      We truly appreciate your generosity and support.
 
+      Sincerely,
+      FoodHero`)
+    } else {
+      donate.current.setCustomValidity(`Please enter value`);
+    }
+  };
   return (
     <div className="donate">
       <form>
@@ -26,18 +33,25 @@ const Donate = () => {
           </p>
         </div>
         <div className="payment">
-          <input className="value" placeholder="Please enter donation $" ref={donate}></input>
-          <input className='apple'
+          <input
+            className="value"
+            placeholder="Please enter donation $"
+            ref={donate}
+          ></input>
+          <input
+            className="apple"
             type="submit"
             value="DONATE WITH Pay"
             onClick={() => checkValidation(donate)}
           ></input>
-           <input className='other'
+          <input
+            className="other"
             type="submit"
             value="CREDIT CARD"
             onClick={() => checkValidation(donate)}
           ></input>
-           <input className='other'
+          <input
+            className="other"
             type="submit"
             value="BANK TRANSFER"
             onClick={() => checkValidation(donate)}
