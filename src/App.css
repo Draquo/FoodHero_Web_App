@@ -1,0 +1,352 @@
+.shadow {
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+div.whoWeAre {
+      background-color: #2a9d8f;
+      min-height: 100vw;
+}
+
+div.map {
+  background-color: #264653;
+  min-height: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+iframe {
+  max-width: 50%;
+}
+div.header {
+  display: flex;
+  padding: 30px;
+  align-items: center;
+  background-color: #264653;
+  color: #e9c46a;
+  font-family: 'Lustria', serif;
+  font-size: 25px;
+}
+
+div.header > img {
+  width: 70px;
+}
+
+div.header > h1 {
+  margin: 0 auto 0 20px;
+}
+
+div.header button {
+  margin-right: 15px;
+  width: 160px;
+  height: 50px;
+  cursor: pointer;
+  font-family: 'Lustria', serif;
+  font-size: 25px;
+  border: none;
+  background-color: #264653;
+  color: #e9c46a;
+  font-weight: bold;
+}
+
+div.About {
+  padding: 0px;
+  color: black;
+  font-family: 'Lustria', serif;
+  background-color: #264653;
+  position: relative;
+  z-index: 3;
+  margin: -10px 0;
+}
+
+.About > .motto {
+  padding: 25px;
+  background-color: #2a9d8f;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0px 0px 25px 25px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+.motto > * {
+  flex: 1;
+}
+
+.motto > :first-child {
+  text-align: left;
+  padding-bottom: 15px;
+  margin-left: 15px;
+  width: 35%;
+  border-radius: 35px;
+}
+
+.motto > :nth-child(2) {
+  text-align: left;
+  margin-left: 7%;
+  font-style: italic;
+  font-family: 'Lato';
+  font-weight: 300;
+  font-size: xx-large;
+}
+
+.poland {
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.management {
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.poland > *, .management> * {
+  flex: 1;
+}
+
+.poland > .description, .management > .description  {
+  text-align: center;
+  padding: 25px;
+  font-size: large;
+  width: 50%;
+  color: #2a9d8f;
+}
+
+.poland > .picture, .management > .picture {
+  text-align: center;
+  font-size: large;
+  background-color: #2a9d8f;
+  border-radius: 25px 25px 25px 25px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+
+
+.management> div.managementPicture {
+  text-align: center;
+  font-size: large;
+  background-color: #2a9d8f;
+  border-radius: 25px 25px 25px 25px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  display: flex;
+  justify-content: center;
+  max-width: 25%;
+  max-height: 25%;
+  padding: 2%;
+}
+
+img.managementPicture {
+box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;}
+
+
+.About > .foodhero {
+  text-align: center;
+  background-color: #2a9d8f;
+  padding: 20px;
+  color: black;
+  margin: 5% 12% 0% 12%;
+  font-size: xx-large;
+  border-radius: 25px 25px 25px 25px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+.About > .freespace {
+  height: 40px;
+}
+
+div.who-are-you {
+  background-color: #e9c46a;
+  padding: 40px;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  z-index: 2;
+  margin: -10px 0;
+}
+
+div.who-are-you > button {
+  width: 170px;
+  height: 80px;
+  font-family: 'Lustria', serif;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  background-color: #e9c46a;
+  color: #264653;
+}
+
+div.foodlist {
+  background-color: #ffa966;
+  min-height: 25vw;
+}
+
+h1.category {
+font-family: 'Lustria', serif;
+font-size: small;
+margin-bottom: 4vw;
+}
+
+div.foodCard {
+    text-align: center;
+    background-color: #F4A261;    
+    min-width: 15%;
+    max-width: 40%;
+    min-height: 18vw;
+    max-height: 20vw;
+    margin: 6.5% 7.5% 5% 7.5%;
+    border: 1px solid rgba(238, 141, 61, 0.874);
+    border-radius: 5%;
+    overflow: hidden;
+    box-shadow: rgb(0 0 0 / 45%) 0px 25px 20px -20px;
+}
+
+img.food {
+  max-width: 12vw;
+}
+
+
+.arrows {
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+
+.material-symbols-outlined {
+  font-size: xx-large;
+  font-display:initial;
+  color: #264653;
+}
+
+
+.arrow {
+  margin: 15px;
+  width: 80px;
+  height: 40px;
+  cursor: pointer;
+}
+
+input.quantity {
+font-size: 1em;
+padding: 3px;
+min-width: 70%;
+border-image: linear-gradient(#E9C46A, #E76F51);
+padding: 3px;
+border-radius: 9999em;
+
+}
+
+div.addToDonating>button {
+  font-family: 'Lustria', serif;
+  margin: 5%;
+  padding: 3%;
+  cursor: pointer;
+  border: double 1px ;
+  background-color: #F4A261;
+  color: black;
+  
+}
+
+button.addFoodButton {
+  min-width: 35%;
+}
+
+div.addToDonating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#form-and-summary-container{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+}
+
+#contact {
+  padding: 20px;
+  background-color: #e76f51;
+  text-align: center;
+}
+
+#contact-form-container {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 50vw;
+  max-width: 50vw;
+}
+
+#contact-form {
+    padding: 20px;
+    background-color:firebrick;
+    border-radius: 15%;
+}
+
+#summary {
+    text-align: center;
+}
+
+#summary-container {
+
+  max-width: 50vw;
+}
+
+#adress-container,
+#contact-container {
+  display: flex;
+  max-width: 50vw;
+  text-align: left;
+}
+
+#summary-list {
+    padding: 20px;
+    background-color:firebrick;
+    border-radius: 25%;
+
+}
+
+.donate {
+  display: flex;
+  background-color: #e9c46a;
+}
+.information {
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 50px;
+  font-size: xx-large;
+}
+.payment {
+  display: flex;
+  flex-direction: column;
+  margin-left: 25%;
+  width: 15%;
+  margin-bottom: 40px;
+  
+  
+}
+.apple {
+  background-color: black;
+  color: white;
+}
+
+.other {
+  background-color:#e76f51;
+  color: black;
+}
+
+.value, .other, .apple {
+  height: 35px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 25px 25px 25px 25px;
+  border: none;
+}
+
+.value{
+  text-align: center;
+}
+
