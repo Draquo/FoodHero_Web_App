@@ -15,11 +15,15 @@ export const settings = {
 
 export default class About extends Component {
   render() {
-   
-    
     return (
-      <div className="About">
-       <Motto image='./hungry.jpg' />
+      <div className="About shadow">
+        <Motto
+          image='./hungry.jpg'
+          p="My dream is a better tomorrow where I'm not hungry and I don't have
+              to ask my neighbors for leftovers."
+          br="Though I'd rather die."
+          brStrong="But unfortunately I have to live..."
+        />
         <div>
           <Slider {...settings}>
             <div>

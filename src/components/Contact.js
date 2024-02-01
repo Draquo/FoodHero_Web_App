@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 
 function Contact(props) {
     const name = useRef(null)
@@ -8,6 +8,7 @@ function Contact(props) {
     const postalCode = useRef(null)
     const street = useRef(null)
     const number = useRef(null)
+    const summary = useRef(null)
 
     function checkValidation(name, surname, phoneNumber, city, postalCode, street, number) {
         /[a-z]{2,}/.test(name.current.value) ?
@@ -18,7 +19,7 @@ function Contact(props) {
             surname.current.setCustomValidity("") :
             surname.current.setCustomValidity('Please enter your surname');
 
-        /[0-9]{9}/.test(phoneNumber.current.value) ?
+        /^[0-9]{9}$/.test(phoneNumber.current.value) ?
             phoneNumber.current.setCustomValidity("") :
             phoneNumber.current.setCustomValidity('Please enter 9-digit phone number');
 
@@ -26,7 +27,7 @@ function Contact(props) {
             city.current.setCustomValidity("") :
             city.current.setCustomValidity('Please enter correct city name');
 
-        /\d{2}-\d{3}/.test(postalCode.current.value) ?
+        /^\d{2}-\d{3}$/.test(postalCode.current.value) ?
             postalCode.current.setCustomValidity("") :
             postalCode.current.setCustomValidity('Please enter the postal code in the format "XX-XXX".');
 
@@ -40,48 +41,51 @@ function Contact(props) {
     }
 
     return (
-        <div id="contact">
+        <div id="contact" className="shadow">
             <h1>Contact form</h1>
             <div id="form-and-summary-container">
                 <div id="contact-form-container">
-                    <form id="contact-form">
+                    <form id="contact-form"  className="shadow">
                         <h2>Contact info</h2>
                         <div id="contact-container">
                             <div>
-                                Name: <div><input placeholder="Name" ref={name}>
+                               <div><input placeholder="Name" ref={name}>
                                 </input></div>
-                                Surname: <div><input placeholder="Surname" ref={surname}>
+                                <div><input placeholder="Surname" ref={surname}>
                                 </input></div>
                             </div>
                             <div>
-                                Phone number: <div><input placeholder="Phone number" ref={phoneNumber}>
+                                <div><input placeholder="Phone number" ref={phoneNumber}>
                                 </input></div>
                             </div>
                         </div>
                         <h2>Adress Info</h2>
                         <div id="adress-container">
                             <div>
-                                City: <div><input placeholder="City" ref={city}>
+                                <div><input placeholder="City" ref={city}>
                                 </input></div>
-                                Postal code: <div><input placeholder="Postal code" ref={postalCode}>
+                                <div><input placeholder="Postal code" ref={postalCode}>
                                 </input></div>
                             </div>
                             <div>
-                                Street: <div><input placeholder="Street" ref={street}>
+                                <div><input placeholder="Street" ref={street}>
                                 </input></div>
-                                Number: <div><input placeholder="Number" ref={number}>
+                                <div><input placeholder="Number" ref={number}>
                                 </input></div>
                             </div>
                         </div>
-                        <div><input type="submit" value="Submit" onClick={() => checkValidation(name, surname, phoneNumber, city, postalCode, street, number)}></input></div>
+                        <div><button type="submit" value="Submit" onClick={() => checkValidation(name, surname, phoneNumber, city, postalCode, street, number)}>SUBMIT</button></div>
                     </form>
                 </div>
                 <div id="summary-container">
-                    <div id="summary-list">
+                    <div id="summary-list" ref={summary} className="shadow">
                         <h2 id="summary">Summary</h2>
-                        {props.summary.map(el => (
-                            <li>{el.quantity} grams of {el.category}</li>
-                        ))}</div>
+                        {props.summary.map((el,index) =>
+                            el.quantity === "0" ?
+                                "" : el.quantity === "1" ?
+                                    <li key={index} id={el.category}>{el.quantity} {el.unit} of {el.category}</li> :
+                                    <li key={index} id={el.category}>{el.quantity} {el.unit}s of {el.category}</li>)}
+                    </div>
                     <div></div>
                 </div>
             </div>

@@ -1,5 +1,5 @@
 import { React, useRef } from 'react'
-import food from './food.js';
+import food from '../../data/food';
 import Slider from 'react-slick';
 import Arrows from './Arrows.js';
 
@@ -16,6 +16,7 @@ function Foodlist(props) {
 
     return (
         <div className='foodlist'>
+            <h1>Pick products that you would like to donate</h1>
             <Slider ref={slider} {...settings}>
                 {food.map((food, index) => (
                     <div className="foodCard" key={index}>
@@ -29,11 +30,8 @@ function Foodlist(props) {
                                 min="1"
                                 max="100"
                                 placeholder={food.unit}
-                                onChange={(event) =>
-                                    props.handleInput(event, food.category, food.unit)
-                                }
                             />
-                            <button className={food.category} onClick={() => props.handleClick(food.category)}>ADD</button>
+                            <button className={food.category} onClick={(event) => props.handleClick(event, food.category, food.unit)}>ADD</button>
                         </div>
                     </div>
                 ))}
